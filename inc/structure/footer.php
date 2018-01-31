@@ -230,6 +230,7 @@ if ( ! function_exists( 'electro_footer_address' ) ) {
 			</div>
 
 		<?php endif;
+		
 	}
 }
 
