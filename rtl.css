@@ -10478,7 +10478,7 @@ h3.faq-title {
    font-size: 1.3rem;
 } 
 section {
-   margin-bottom: 1em; 
+   margin-bottom: 0em; 
 }
 
 .products-2-1-2 {
@@ -10495,3 +10495,8 @@ section {
   .products-carousel .owl-stage .owl-item.active:first-child .product {
     margin-right: 3px;
     margin-bottom: 3em;}
+
+
+    section.section-product-cards-carousel .owl-carousel .owl-stage-outer {
+       padding-bottom: 0em; 
+  }
