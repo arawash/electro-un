@@ -10470,12 +10470,10 @@ h3.faq-title {
   display: inherit;
 }
 
-/* 
-/* .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 , */
-/*
-.woocommerce-LoopProduct-link.woocommerce-loop-product__link
+.woocommerce-loop-product__title
 {
-  
-  height: 1.572em;
+  display: inline-block;
+  height: 2em;
    overflow: hidden; 
-} */
+   font-size: 1.3rem;
+} 
