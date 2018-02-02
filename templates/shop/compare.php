@@ -89,7 +89,7 @@ global $product, $yith_woocompare, $post; ?>
             <?php foreach( $fields as $field => $name ) : ?>
                 <?php if( ! in_array( $field, $fields_displayed ) ) : ?>
                 <tr>
-                    <th><?php echo wp_kses_post( $name ); ?></th>
+                    <th><?php echo wp_kses_post( $name ); ?> 44</th>
                     <?php foreach( $products as $key => $product ) : ?>
                     <td>
                         <?php 

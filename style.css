@@ -118,8 +118,8 @@ a:hover, a:focus {
  * Typography
  */
 body {
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
+ /*  -ms-word-wrap: break-word;
+  word-wrap: break-word; */
   font-size: 0.875em;
   letter-spacing: -0.01em; }
 
