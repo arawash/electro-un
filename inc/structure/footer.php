@@ -325,10 +325,10 @@ if ( ! function_exists( 'electro_default_fb_widgets' ) ) {
 	 * Displays default footer bottom widgets
 	 */
 	function electro_default_fb_widgets( $args ) {
-
-		$args['widget_id'] = 'meta-footer';
+/*rawash*/
+	/* 	$args['widget_id'] = 'meta-footer';
 		the_widget( 'WP_Widget_Meta', array( 'title' => '&nbsp;' ), $args );
-
+ */
 		$args['widget_id'] = 'pages-widget-footer-bottom';
 		the_widget( 'WP_Widget_Pages', array( 'title' => __( 'Customer Care', 'electro') ), $args );
 	}
