@@ -114,7 +114,9 @@ global $product, $yith_woocompare, $post; ?>
                     </td>
                     <?php $fields_displayed[] = 'price'; ?>
                     <?php endforeach; ?>
-                </tr>
+                </tr>   
+
+                
             <?php endif; ?>
 
             <?php if ( $repeat_add_to_cart == 'yes' && isset( $fields['add-to-cart'] ) ) : ?>
