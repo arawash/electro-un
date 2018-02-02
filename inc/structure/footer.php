@@ -331,6 +331,7 @@ if ( ! function_exists( 'electro_default_fb_widgets' ) ) {
  */
 		$args['widget_id'] = 'pages-widget-footer-bottom';
 		the_widget( 'WP_Widget_Pages', array( 'title' => __( 'Customer Care', 'electro') ), $args );
+		
 	}
 }
 
