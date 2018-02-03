@@ -20,7 +20,14 @@ if ( ! comments_open() ) {
 ?>
 <div id="reviews" class="electro-advanced-reviews">
 	<div class="advanced-review row">
-		<div class="col-xs-12 col-md-6">
+
+	<?php /*rawash */ ?>
+
+<div class="fb-comments" data-href="http://alalamiastore.com/" data-numposts="15" class="col-xs-12" width="100%"></div>
+
+
+
+<!-- 		<div class="col-xs-12 col-md-6">
 			<h2 class="based-title"><?php echo esc_html( sprintf( _n( 'Based on %s review', 'Based on %s reviews', $review_count, 'electro' ), $review_count ) ); ?></h2>
 			<div class="avg-rating">
 				<?php 
@@ -103,9 +110,9 @@ if ( ! comments_open() ) {
 			<p class="woocommerce-verification-required"><?php _e( 'Only logged in customers who have purchased this product may leave a review.', 'electro' ); ?></p>
 
 		<?php endif; ?>
-		</div>
+		</div> -->
 	</div>
-	
+<!-- 	
 	<div id="comments">
 		<?php if ( have_comments() ) : ?>
 
@@ -129,6 +136,10 @@ if ( ! comments_open() ) {
 
 		<?php endif; ?>
 	</div>
+
+ -->
+
+
 
 	<div class="clear"></div>
 </div>

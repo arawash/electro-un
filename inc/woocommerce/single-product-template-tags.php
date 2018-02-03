@@ -170,6 +170,70 @@ if ( ! function_exists( 'electro_wrap_single_product_close' ) ) {
 	}
 }
 
+/*rawash*/
+
+if ( ! function_exists( 'installment_add' ) ) {
+	/**
+	 * 
+	 */
+	function installment_add() {
+		?>
+		<div>
+		<div class="alert alert-success">
+  <strong>Success!</strong> Indicates a successful or positive action.
+
+  <div class="well">
+  <table class="table table-striped">
+<?php  
+
+
+global $product;
+
+?>
+<p class="price"><?php echo $product->get_price_html(); ?></p>
+<?php
+print($product) ;
+?>
+
+
+	<thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+		</div><!-- /.single-product-installment-wrapper -->
+		<?php
+	}
+}
+
+
+
+
+
 if ( ! function_exists ( 'electro_wrap_product_images' ) ) {
 	/**
 	 * 
