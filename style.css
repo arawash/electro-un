@@ -10353,3 +10353,45 @@ h3.faq-title {
 
   display: inherit;
 }
+
+
+.woocommerce-loop-product__title
+{
+  display: inline-block;
+  height: 2em;
+   overflow: hidden; 
+   font-size: 1.3rem;
+} 
+section {
+   margin-bottom: 0em; 
+}
+
+.products-2-1-2 {
+
+   margin-bottom: 85px; 
+}
+
+#content {
+  margin-bottom: 0em;}
+
+
+
+
+  .products-carousel .owl-stage .owl-item.active:first-child .product {
+    margin-right: 3px;
+    margin-bottom: 3em;}
+
+
+    section.section-product-cards-carousel .owl-carousel .owl-stage-outer {
+       padding-bottom: 0em; 
+  }
+
+  [dir=rtl] .top-bar .nav-inline .dropdown-menu .menu-item > a > {
+    float: right;
+    z-index: 232323433454356546456456456;
+    }
+    .single-product.full-width .single-product-wrapper {
+     margin-bottom: 0em; 
+    }
+
+

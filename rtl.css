@@ -10500,3 +10500,14 @@ section {
     section.section-product-cards-carousel .owl-carousel .owl-stage-outer {
        padding-bottom: 0em; 
   }
+
+
+
+
+  [dir=rtl] .top-bar .nav-inline .dropdown-menu .menu-item > a > {
+    float: right;
+    z-index: 232323433454356546456456456;
+    }
+    .single-product.full-width .single-product-wrapper {
+     margin-bottom: 0em; 
+    }

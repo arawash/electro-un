@@ -54,7 +54,7 @@ if ( ! function_exists( 'electro_enqueue_scripts' ) ) {
 	function electro_enqueue_scripts() {
 
 		global $electro_version;
-
+		wp_enqueue_script( 'angularjs', get_template_directory_uri() . '/inc/angular.min.js', array ( 'jquery' ), all, false);
 		wp_enqueue_script( 'tether-js',		get_template_directory_uri() . '/assets/js/tether.min.js', array( 'jquery' ), $electro_version, true );
 		wp_enqueue_script( 'bootstrap-js', 	get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery', 'tether-js' ), $electro_version, true );
 		wp_enqueue_script( 'waypoints-js', 	get_template_directory_uri() . '/assets/js/jquery.waypoints.min.js', array( 'jquery' ), $electro_version, true );

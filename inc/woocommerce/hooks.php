@@ -188,7 +188,7 @@ add_action( 'woocommerce_single_product_summary',			'woocommerce_template_single
 add_action( 'woocommerce_single_product_summary',			'electro_template_single_add_to_cart',			30 );
 
 add_action( 'woocommerce_after_single_product_summary',		'electro_wrap_single_product_close',			1  );
- add_action( 'woocommerce_after_single_product_summary',		'installment_add',	 	1  );
+ add_action( 'woocommerce_after_add_to_cart_button',		'installment_add',	 	1  );
  
 
 add_action( 'woocommerce_after_single_product_summary',     'electro_output_related_products',              20 );

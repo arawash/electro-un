@@ -178,7 +178,7 @@ if ( ! function_exists( 'installment_add' ) ) {
 		?>
 
 	<button 
-		type="text" 
+		type="button" 
 		name="add-to-cart" 
 		value="<?php echo esc_attr( $product->id ); ?>"
 		id="instalment" 
@@ -190,7 +190,8 @@ if ( ! function_exists( 'installment_add' ) ) {
 
 		<div>
 			<div id="installment_table" class="alert alert-success" style="visibility: hidden;" >
-  				<strong>Success!</strong> Indicates a successful or positive action.
+			<br>  
+				<strong>Success!</strong> Indicates a successful or positive action.
 							<?php  
 							global $product;
 							?>
@@ -198,7 +199,87 @@ if ( ! function_exists( 'installment_add' ) ) {
 							<?php
 
 					 echo $product->price ;
+					 
+					 /**
+					  *
+					  * the calculat
+					  *
+					  */
+					 
 							?>
+<body ng-app="installment">							
+<div ng-controller="ctrl">
+
+<div class="input-group input-group-lg">
+	<!--<span class="input-group-addon" id="sizing-addon1">@</span>-->
+	<p>Input something in the input box:</p>
+	<input type="text" ng-model="inAdvance" class="form-control" placeholder="المقدم" aria-describedby="sizing-addon1">
+</div>
+<div class="dropdown">
+	<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+		aria-expanded="true">
+اختار مدة القسط
+<span class="caret"></span>
+</button>
+	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+		<li ng-repeat="dur in durs"><a ng-click="getper($index)" href="#">{{dur.monthes}} monthes</a></li>
+		<!--<li role="separator" class="divider"></li>-->
+		<!--<li><a href="#">Separated link</a></li>-->
+	</ul>
+</div>
+
+<!--<p>Name: <input type="text"></p>-->
+<p>the rest amount : {{restAmount}}</p>
+<p>interest :  {{interest}}</p>
+<p>each month : {{eachMonth}}</p>
+
+
+<div class="alert alert-warning" ng-show="showAlert">
+	<strong>تحزير!</strong> برجاء ادخال مبلغ اكبر من او يساوى 20% من المبلغ الاصلى.
+</div>
+
+</div>
+<script>
+angular.module('installment', [])
+	.controller('ctrl', function ($scope) {
+		$scope.per = 0;
+		$scope.eachMonth = 0
+		$scope.interest = 0
+		$scope.restAmount = 0
+		$scope.showAlert = false;
+///////////////////////////////////////////////////////////////
+		$scope.durs = [{
+			monthes: 6,
+		}, {
+			monthes: 12,
+		}]
+
+		$scope.categ = [{
+			type: "air caonditaner",
+			installmentDuration: [0.25, 0.35]
+		}]
+//////////////////////////////////////////////////////
+		$scope.getper = (idx) => {
+			$scope.per = $scope.categ[0].installmentDuration[idx]
+			$scope.monthes = $scope.durs[idx].monthes
+			let amount = 5000;
+			if ($scope.inAdvance > 0.2 * amount && $scope.inAdvance <  amount  ) {
+				$scope.showAlert = false;
+
+				$scope.restAmount = amount - $scope.inAdvance
+				$scope.interest = $scope.restAmount * $scope.per
+				$scope.eachMonth = ($scope.restAmount + $scope.interest) / $scope.monthes
+			} else {
+				$scope.showAlert = true;
+			}
+		}
+
+	});
+</script>
+</body>
+
+</html>
+							
   			</div>
 		</div><!-- /.single-product-installment-wrapper -->
 		<script>
